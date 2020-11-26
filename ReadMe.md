@@ -58,6 +58,8 @@
 
     当我们遇到 nums[j] != nums[i]  nums[j] = nums[i] 时，跳过重复项的运行已经结束，因此我们必须把它（nums[j]nums[j]）的值复制到 nums[i + 1]nums[i+1]。然后递增 i，接着我们将再次重复相同的过程，直到 j 到达数组的末尾为止。
 
+
+
 6. 动态规划
 
     以leetcode [122.买卖股票的最佳时机](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii/)为例<br>
@@ -78,3 +80,7 @@
     对于初始状态，根据状态定义我们可以知道第 0 天交易结束的时候 dp[0][0]=0，dp[0][1]=−prices[0]。
 
     因此，我们只要从前往后依次计算状态即可。由于全部交易结束后，持有股票的收益一定低于不持有股票的收益，因此这时候 dp[n−1][0] 的收益必然是大于 dp[n−1][1] 的，最后的答案即为 dp[n−1][0]。
+
+7. string 类常用api
+
+   [C++中关于STRING类的一些API总结](https://www.cnblogs.com/wyt123/p/10711326.html)   
