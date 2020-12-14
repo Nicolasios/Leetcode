@@ -10,7 +10,14 @@ class Solution
 public:
     int trailingZeroes(int n)
     {
-        return n / 5 + 1;
+        int zeronum = 0;
+        long current = 5;
+        while (n >= current)
+        {
+            zeronum += n / current;
+            current *= 5;
+        }
+        return zeronum;
     }
 };
 // @lc code=end
