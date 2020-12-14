@@ -5,27 +5,38 @@
  */
 
 // @lc code=start
-class MinStack {
+class MinStack
+{
+    stack<int> min_stack;
+    stack<int> normal_stack;
+
 public:
     /** initialize your data structure here. */
-    MinStack() {
-        
+    MinStack()
+    {
+        min_stack.push(INT_MAX);
     }
-    
-    void push(int x) {
-        
+
+    void push(int x)
+    {
+        normal_stack.push(x);
+        min_stack.push(min(min_stack.top(), x));
     }
-    
-    void pop() {
-        
+
+    void pop()
+    {
+        normal_stack.pop();
+        min_stack.pop();
     }
-    
-    int top() {
-        
+
+    int top()
+    {
+        return normal_stack.top();
     }
-    
-    int getMin() {
-        
+
+    int getMin()
+    {
+        return min_stack.top();
     }
 };
 
@@ -38,4 +49,3 @@ public:
  * int param_4 = obj->getMin();
  */
 // @lc code=end
-
