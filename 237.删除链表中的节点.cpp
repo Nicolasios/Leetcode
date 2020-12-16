@@ -14,6 +14,7 @@
  * };
  */
 //思维不要被局限住了
+//主要是直接给了node节点
 class Solution
 {
 public:
