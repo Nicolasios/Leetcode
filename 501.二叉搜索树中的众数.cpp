@@ -19,6 +19,6 @@ class Solution
 public:
     vector<int> findMode(TreeNode *root)
     {
-    }
+        }
 };
 // @lc code=end
